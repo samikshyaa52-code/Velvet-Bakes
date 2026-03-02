@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Velvet Bakes - The Whole Wheat Revolution</title>
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Unified Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="sidebar-overlay" onclick="toggleCart()"></div>
+
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-name">Velvet Bakes</span>
+            </a>
+
+            <div class="nav-controls">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="custom.html">Custom Cakes</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <div class="cart-trigger" onclick="toggleCart()">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h1 style="font-size: 42px;">Our Story</h1>
+                <p style="color: var(--accent-gold); text-transform: uppercase; letter-spacing: 4px; font-size: 12px;">
+                    Health Meets Indulgence</p>
+            </div>
+
+            <div class="grid-responsive" style="align-items: center; gap: 60px;">
+                <div>
+                    <img src="images/baker-mixing-whole-wheat.jpg" alt="Baking with Whole Wheat">
+                </div>
+                <div>
+                    <h2 style="font-size: 32px; margin-bottom: 20px;">The Maida-Free Mission</h2>
+                    <p style="margin-bottom: 20px;">Founded in Bhairahawa, Velvet Bakes was born out of a simple goal:
+                        to make celebrations healthier without losing the magic of a traditional patisserie.</p>
+                    <p style="margin-bottom: 20px;">We replace refined flour (Maida) with stone-ground whole wheat
+                        (Atta) and use organic jaggery instead of white sugar. The result? A nutrient-dense bite that
+                        tastes like pure luxury.</p>
+                </div>
+            </div>
+
+            <div class="grid-responsive" style="margin-top: 80px;">
+                <div style="background: var(--card-bg); padding: 30px; text-align: center;">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 15px;">100% Whole Grain</h3>
+                    <p style="font-size: 14px; color: var(--text-muted);">Zero Maida. Only stone-ground whole wheat for
+                        natural fiber.</p>
+                </div>
+                <div style="background: var(--card-bg); padding: 30px; text-align: center;">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 15px;">Natural Sweetness</h3>
+                    <p style="font-size: 14px; color: var(--text-muted);">Organic jaggery and honey over refined white
+                        sugar.</p>
+                </div>
+                <div style="background: var(--card-bg); padding: 30px; text-align: center;">
+                    <h3 style="color: var(--accent-gold); margin-bottom: 15px;">Local Sourcing</h3>
+                    <p style="font-size: 14px; color: var(--text-muted);">Fresh ingredients from the farms of Rupandehi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar">
+        <div class="sidebar-header">
+            <h2>Your Basket</h2>
+            <div onclick="toggleCart()" style="font-size:30px; cursor:pointer;">&times;</div>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <div class="summary-row"><span>Subtotal</span><span>NPR <span id="cart-subtotal">0</span></span></div>
+            <div class="summary-row total"><span>Total</span><span>NPR <span id="cart-total">0</span></span></div>
+        </div>
+        <div class="checkout-form">
+            <input type="text" id="cust-name" placeholder="Full Name">
+            <input type="text" id="cust-address" placeholder="Delivery Address">
+            <button class="btn-premium" onclick="handleCheckout()">Checkout via WhatsApp</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p style="font-size: 10px; color: #555;">&copy; 2026 VELVET BAKES. THE WHOLE WHEAT REVOLUTION.</p>
+        </div>
+    </footer>
+
+    <!-- Unified Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
